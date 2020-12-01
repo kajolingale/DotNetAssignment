@@ -69,15 +69,11 @@ namespace Assignment
         }
 
         
-        private static int empNo= 0;
+        private static int count= 0;
+        private int empNo;
         
         public int EmpNo
         {
-            set
-            {
-                value = empNo;
-            }
-            
             get
             {
                 
@@ -124,26 +120,30 @@ namespace Assignment
         public Employee(string Name,decimal Basic,short DeptNo)
         {
 
-            EmpNo=empNo++;
+            count++;
+            this.empNo = count;
             this.Name = Name;
             this.Basic = Basic;
             this.DeptNo = DeptNo;
         }
         public Employee(string Name, decimal Basic)
         {
-            empNo++;
+            count++;
+            this.empNo = count;
             this.Name = Name;
             this.Basic = Basic;
         }
 
         public Employee(string Name)
         {
-            empNo++;
+           count++;
+            this.empNo = count;
             this.Name = Name;
         }
         public Employee()
         {
-            empNo++;
+            count++;
+            this.empNo = count;
         }
 
     }
