@@ -30,7 +30,7 @@ namespace Assignment
             Console.WriteLine("==============================");
             Employee o3 = new Employee("Amol");
             Console.WriteLine("Emp No = " + o3.EmpNo);
-            Console.WriteLine("Name = " + o3.Name);
+            Console.WriteLine("Name = " + o3.Name); 
             Console.WriteLine("==============================");
             Console.WriteLine(e1.EmpNo);
             Console.WriteLine(o2.EmpNo);
