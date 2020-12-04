@@ -30,7 +30,18 @@ namespace ArrayAssign
                     e[i].Display();
                 }
             }
+            int max = 0;
+            //int k;
 
+            Console.WriteLine("Employee with high salary");
+            for (int i = 1; i < e.Length; i++)
+            {
+                if (e[max].DisplayHighestSal()< e[i].DisplayHighestSal())
+                {
+                    max = i;
+                }
+            }
+           e[max].Display();
             Console.ReadLine();
         }
     }
@@ -122,9 +133,12 @@ namespace ArrayAssign
 
         public void Display()
         {
-            Console.WriteLine(Name+" "+Basic+" "+DeptNo);
+            Console.WriteLine(Name+" "+Basic+" "+DeptNo+" "+DisplayHighestSal());
         }
-       
+        public decimal DisplayHighestSal()
+        {
+            return Basic * 12;
+        }
        
         
     }
